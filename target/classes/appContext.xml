@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.prowings.Student" name="student1">
+        <property name="roll"><value>10</value></property>
+        <property name="name"><value>"Ram"</value></property>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean class="com.prowings.Student" name="student2" scope="prototype">
+        <property name="roll"><value>20</value></property>
+        <property name="name"><value>"Sham"</value></property>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean class="com.prowings.Address" name="address" scope="prototype">
+        <property name="city"><value>"Pune"</value></property>
+        <property name="country"><value>"India"</value></property>
+        <property name="pin"><value>123</value></property>
+    </bean>
+</beans>

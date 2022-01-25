@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.prowings.Person" name="person1">
+        <property name="adhar" value="1234" />
+        <property name="mobileNos">
+            <list>
+                <value>89123456</value>
+                <value>09786765</value>
+            </list>
+        </property> 
+        <property name="propertyNo">
+            <set>
+                <value>1234</value>
+                <value>1234</value>
+                <value>3245</value>
+            </set>
+        </property>
+        <property name="x">
+            <map>
+                <entry key="AAA" value="ABB" />
+                <entry key="BBB" value="BAA" />
+            </map>
+        </property>
+    </bean>
+
+
+</beans>
